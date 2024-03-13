@@ -74,7 +74,7 @@ body {
 .formLogin input {
     padding: 15px;                  /* Preenchimento interno */
     font-size: 14px;                /* Tamanho da fonte */
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     border: 1px solid #ccc;       /* Borda com cor cinza */
    /*  margin-bottom: 20px; */            /* Margem inferior */
     margin-top: 5px;                /* Margem superior */
