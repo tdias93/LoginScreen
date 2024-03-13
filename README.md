@@ -2,6 +2,12 @@
 
 Este é um projeto simples de tela de login desenvolvido com Django. Foi criado com o intuito de colocar em prática os conhecimentos em Django e servir como base para futuros projetos mais complexos.
 
+#### Modelo
+
+https://github.com/tdias93/LoginScreen/assets/50459078/6ef901d8-1618-405a-b9a5-90a61a75336d
+
+
+
 ## Funcionalidades
 
 - Página de login simples.
