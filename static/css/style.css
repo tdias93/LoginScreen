@@ -3,10 +3,10 @@
 
 /* DEFINIÇÃO DAS VARIÁVEIS */
 :root {
-    --primary-color: #113852;     /* Cor primária */
-    --secondary-color: #F05A22;   /* Cor secundária */
+    --primary-color: #F4C21C;     /* Cor primária */
+    --secondary-color: #00BF63;   /* Cor secundária */
     --tertiary-color: #666;       /* Cor terciária */
-    --background-color: #113852;    /* Cor de fundo */
+    --background-color: #F4C21C;    /* Cor de fundo */
 }
 
 /* DEFINIÇÕES GERAIS DO CORPO DA PÁGINA */
