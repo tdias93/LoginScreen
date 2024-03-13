@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* DEFINIÇÃO DAS VARIÁVEIS */
+:root {
+    --primary-color: #113852;     /* Cor primária */
+    --secondary-color: #F05A22;   /* Cor secundária */
+    --tertiary-color: #666;       /* Cor terciária */
+    --background-color: #113852;    /* Cor de fundo */
+}
+
+/* DEFINIÇÕES GERAIS DO CORPO DA PÁGINA */
+body {
+    font-family: "Bree Serif", serif;   /* Define a fonte principal */
+    margin: 0;                          /* Remove margens */
+    padding: 0;                         /* Remove preenchimento */
+    color: var(--primary-color);        /* Define a cor do texto */
+}
+
+/* ESTILO DA PÁGINA PRINCIPAL */
+.page {
+    display: flex;                               /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column;                      /* Coluna principal */
+    align-items: center;                         /* Alinha itens no centro horizontal */
+    align-content: center;                       /* Alinha conteúdo dentro do contêiner */
+    justify-content: center;                     /* Alinha itens no centro vertical */
+    width: 100%;                                 /* Largura total */
+    height: 100vh;                               /* Altura total da tela */
+    background-color: var(--background-color);   /* Cor de fundo */
+}
+
+.page-logo {
+    max-width: 350px;
+    max-height: 86px;
+    position: absolute; /* Define a posição como absoluta para posicionar a imagem */
+    top: 0; /* Alinha a imagem no topo da div .page */
+    left: 50%; /* Alinha a imagem no centro horizontalmente */
+    transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+}
+
+/* ESTILO DO FORMULÁRIO DE LOGIN */
+.formLogin {
+    display: flex;                                      /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column;                             /* Coluna principal */
+    background-color: #fff;                           /* Cor de fundo */
+    border-radius: 7px;                                 /* Borda arredondada */
+    padding: 40px;                                      /* Preenchimento interno */
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);    /* Sombra */
+    gap: 5px;                                           /* Espaço entre os elementos filhos */
+}
+
+/* ESTILO DA ÁREA DE LOGIN */
+.areaLogin img {
+    width: 420px;   /* Largura da imagem */
+}
+
+/* ESTILO DO TÍTULO DO FORMULÁRIO DE LOGIN */
+.formLogin h1 {
+    padding: 0;         /* Remove o preenchimento */
+    margin: 0;          /* Remove as margens */
+    font-weight: 500;   /* Peso da fonte */
+    font-size: 2.3em;   /* Tamanho da fonte */
+}
+
+/* ESTILO DO PARÁGRAFO DO FORMULÁRIO DE LOGIN */
+.formLogin p {
+    display: inline-block;          /* Exibe como bloco inline */
+    font-size: 14px;                /* Tamanho da fonte */
+    color: var(--tertiary-color);   /* Cor do texto */
+    margin-bottom: 25px;            /* Margem inferior */
+}
+
+/* ESTILO DOS INPUTS DO FORMULÁRIO DE LOGIN */
+.formLogin input {
+    padding: 15px;                  /* Preenchimento interno */
+    font-size: 14px;                /* Tamanho da fonte */
+    color: var(--primary-color);
+    border: 1px solid #ccc;       /* Borda com cor cinza */
+   /*  margin-bottom: 20px; */            /* Margem inferior */
+    margin-top: 5px;                /* Margem superior */
+    border-radius: 4px;             /* Borda arredondada */
+    transition: all linear 160ms;   /* Transição suave */
+    outline: none;                  /* Remove o contorno ao focar */
+}
+
+/* ESTILO DOS INPUTS DO FORMULÁRIO DE LOGIN AO FOCAR */
+.formLogin input:focus {
+    border: 1px solid var(--secondary-color);   /* Borda com cor latanja */
+}
+
+.invalid-feedback {
+    color: #dc3545; /* Cor vermelha */
+    font-size: 12px;  /* Tamanho da fonte */
+}
+
+/* ESTILO DOS LABELS DO FORMULÁRIO DE LOGIN */
+.formLogin label {
+    font-size: 16px;    /* Tamanho da fonte */
+    font-weight: 400;   /* Peso da fonte */
+    margin-top: 15px;
+}
+
+/* ESTILO DOS LINKS DO FORMULÁRIO DE LOGIN */
+.formLogin a {
+    display: inline-block;          /* Exibe como bloco inline */
+    margin-top: 15px;
+    margin-bottom: 15px;            /* Margem inferior */
+    font-size: 13px;                /* Tamanho da fonte */
+    font-weight: 400;
+    color: var(--tertiary-color);   /* Cor do texto */
+    transition: all linear 160ms;   /* Transição suave */
+}
+
+/* ESTILO DOS LINKS DO FORMULÁRIO DE LOGIN AO PASSAR O MOUSE */
+.formLogin a:hover {
+    color: var(--primary-color);   /* Cor do texto laranja ao passar o mouse */
+}
+
+/* ESTILO DO BOTÃO DO FORMULÁRIO DE LOGIN */
+.btn {
+    background-color: var(--secondary-color);    /* Cor de fundo laranja */
+    color: #fff !important;                    /* Cor do texto branco */
+    font-size: 14px;                             /* Tamanho da fonte */
+    font-weight: 600;                            /* Peso da fonte */
+    border: none !important;                     /* Remove a borda */
+    transition: all linear 160ms;                /* Transição suave */
+    cursor: pointer;                             /* Cursor de ponteiro */
+    /* margin: 0 !important; */                        /* Remove as margens */
+}
+
+/* ESTILO DO BOTÃO DO FORMULÁRIO DE LOGIN AO PASSAR O MOUSE */
+.btn:hover {
+    transform: scale(1.05);                     /* Aumenta o tamanho ao passar o mouse */
+    background-color: var(--secondary-color);   /* Cor de fundo laranja mais escura */
+}
+
+
+.header {
+    display: flex;
+    justify-content: flex-end; /* Coloca os itens em cada extremidade */
+    align-items: center;
+    padding: 10px; /* Ajuste conforme necessário */
+    background-color: #f0f0f0; /* Cor de fundo do cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    left: 0;  /* Alinha o cabeçalho à esquerda */
+    right: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    border-radius: 0 0 10px 10px;
+}
+
+.header img {
+    font-size: 24px;
+    width: 86; 
+    height: 350;
+}
+
+.header-user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinha os itens à direita */
+}

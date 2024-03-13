@@ -1,0 +1,48 @@
+{% extends 'share/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="page">
+        <form method="POST" class="formLogin" action="">
+
+            <!-- Adiciona token CSRF para proteção contra ataques -->
+            {% csrf_token %}
+
+            <img src="{% static 'assets/logo/Logo.png' %}" alt="Logo da Empresa." width="350" height="86">
+            <p>Digite seus dados de acesso</p>
+
+            <!-- Loop pelos campos visíveis do formulário -->
+            {% for field in form.visible_fields %}  
+            
+                <!-- Rótulo do campo -->
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>  
+
+                <!-- Renderiza o campo do formulário -->
+                {{ field }}  
+
+                <!-- Div para exibir mensagens de erro -->
+                <div class="invalid-feedback">  
+
+                    <!-- Verifica se há erros para o campo -->
+                    {% if field.errors %}  
+
+                        {% for error in field.errors %}
+
+                             <!-- Exibe cada mensagem de erro -->
+                            {{ error }} 
+
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                
+            {% endfor %}
+
+            <!-- Link para recuperação de senha -->
+            <a href="/">Esqueci minha senha</a>  
+
+            <!-- Botão de envio do formulário -->
+            <input type="submit" value="Acessar" class="btn"/>  
+        </form>
+    </div>
+
+{% endblock %}
